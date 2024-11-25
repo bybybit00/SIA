@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Fee Payment</title>
+    <script>function Back() {window.location.href = "form1.html";}</script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-attachment: fixed;
+  background-position: center; 
+}
+
+.payment-form {
+    background: wheat;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.payment-form h1 {
+    margin-bottom: 10px;
+    color:black;
+    text-align: center;
+}
+
+.payment-form p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.payment-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.payment-form input,
+.payment-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.payment-fields {
+    display: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="payment-form">
+        <h1>Pay Application Fee</h1>
+        <p>Please complete the form below to process your payment.</p>
+        
+        <form action="" method="POST">
+            <label for="payment-method">Choose Payment Method</label>
+            <select id="payment-method" name="payment-method" required >
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Bank Transfer</option>
+            </select>
+            
+            <button type="submit" class="submit-button" onclick="alert('SUBMITED!')">Submit Payment</button><br>
+        </form><br>
+        <button style="cursor: pointer; width: 150px; height: 50px; color: black; background-color: #007bff;" id="btn" onclick="document.location='form1.html'">Back</button>
+    </div>
+
+</body>
+</html>

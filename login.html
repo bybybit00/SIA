@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      background-image: url(2.jpg);
+      background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+    }
+    form {
+      max-width: 300px;
+      margin: auto;
+    }
+    input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      background-color: #16bedb;
+      color: white;
+      border: none;
+    }
+    button:hover {
+      background-color: #b12070;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <h2>Login Form</h2>
+  <form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit">Login</button>
+    <p id="errorMessage" class="error"></p>
+  </form>
+  <script>
+    
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault(); 
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('errorMessage');
+  
+    
+    const validUsername = "byby";
+    const validPassword = "admin123";
+  
+  
+    if (username === validUsername && password === validPassword) {
+      errorMessage.textContent = ""; 
+      window.location.href = "form1.html"; 
+    } else {
+      errorMessage.textContent = "Invalid username or password.";
+    }
+  });
+  </script>
+</body>
+</html>

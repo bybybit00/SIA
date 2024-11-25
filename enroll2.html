@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #fcefef;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border: black;
+  }
+  
+  /* School Address Inputs */
+  #school-address,
+  #school-state {
+    width: 48%;
+    display: inline-block;
+  }
+  
+  #school-state {
+    margin-left: 4%;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(2.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+
+  }
+  
+  /* Form Container */
+  .form-container {
+    background-color: wheat;
+    padding: 30px;
+    border-radius: 50px;
+    border-color:  black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Form Styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .name-fields input {
+    width: 32%;
+    margin-right: 2%;
+  }
+  
+  .name-fields input:last-child {
+    margin-right: 0;
+  }
+  
+  .date-fields select,
+  .date-fields input {
+    width: 32%;
+    margin-right: 2%;
+  }
+  
+  .date-fields input:last-child {
+    margin-right: 0;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .radio-group label {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    
+  }
+  
+  button:hover {
+    background-color: blue;
+  }
+  #btn{
+    margin: 60px;
+    width: 90px;
+    height: 50px;
+    border-radius: 50px;
+    
+    border-color: black;
+  }
+  
+    </style>
+    <script>function Back() {window.location.href = "enroll.html";}</script>
+    <script>function next() {window.location.href = "payment.html";}</script>
+</head>
+<body>
+    <div class="form-container">
+        <form action="#" method="post">
+          <h2>Education</h2>
+          <div class="form-group">
+            <label for="high-school-name">High School or Equivalent Name</label>
+            <input type="text" id="high-school-name" name="high_school_name" placeholder="Enter the name of your school" required>
+          </div>
+    
+
+          <div class="form-group">
+            <label for="graduation-date">Graduation Date</label>
+            <input type="date" id="graduation-date" name="graduation_date" required>
+          </div>
+    
+        
+          <div class="form-group">
+            <label for="school-address">School Address</label>
+            <input type="text" id="school-address" name="school_address" placeholder="City" required>
+            <input type="text" id="school-state" name="school_state" placeholder="State / Province" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="school-country">Country</label>
+            <select id="school-country" name="school_country" required>
+              <option value="">Select a country</option>
+              <option value="USA">United States</option>
+              <option value="Canada">Canada</option>
+              <option value="India">India</option>
+              <option value="Australia">Australia</option>
+              <option value="Aruba">Aruba</option>
+            </select><br><br><br><br>
+            <button id="btn" onclick="document.location='enroll.html'">Back</button>
+             <button id="btn" onclick="document.location='payment.html'">Next</button>
+          </div>
+        </form>
+    </div>
+</body>
+</html>
